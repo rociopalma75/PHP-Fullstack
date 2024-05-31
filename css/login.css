@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lora", serif; 
+    font-optical-sizing: auto;  
+    font-style: normal;
+}
+
+:root{
+    --bg-color: #5B02A3;
+}
+
+body{
+    /* background-color: rgba(190, 157, 224, 0.627); */
+    background: linear-gradient(150deg,rgb(160, 127, 194),rgb(224, 212, 236));
+    background-repeat: no-repeat;
+}
+
+/* Estilo Header para Escritorio */
+.headerLogin{
+    color: #000000;
+    position: sticky;
+    height: 12vh;
+    top: 0;
+    z-index:10;
+    
+    .navegacion{
+        height: inherit;
+        margin-left: 40px;
+        margin-right: 40px;
+        padding: 1.5rem 0;
+        display: flex;
+        align-items: center;
+
+        .logo{
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.5em;
+            color: #000000;
+            
+            .spanLight{
+                color: var(--bg-color);
+            }
+        }
+    }
+}
+
+/*Estilo para Header para Mobile y Tablet*/
+@media screen and (max-width:768px){
+    .headerLogin{
+        .navegacion{
+            margin-left:10px;
+            margin-right:10px;
+        }
+    }   
+}
+
+/* Estilos para Login Escritorio */
+.main{
+    height: 88vh;
+    
+    .seccionLogin{
+        background-color: rgba(236, 230, 242, 0.751);
+        width: 30vw;
+        margin: 0 auto;
+        border:solid 2px #ffffff;
+        border-radius: 5px;
+        padding: 40px 10px;   
+        height: 80vh;
+        font-size: 1em;
+
+        display: flex;
+        flex-direction: column;
+              
+
+        .tituloLogin{
+            font-size: 2.2em;
+            font-weight: 700;
+            color: var(--bg-color);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        form{
+            width: 100%;
+            padding: 10px; 
+            input{
+                width: 80%;
+                height: 40px;
+                font-size: 1em;
+                border-radius: 15px;
+                border:0px;
+                display: block;
+                margin: auto;
+            }
+            
+            .inputLogin{
+                padding-left: 25px;
+                background-color: #ffffff;
+                margin-bottom: 30px;
+            }
+
+            .botonLogin{
+                background-color: var(--bg-color);
+                color: #ffffff;
+                font-weight: 600;
+                margin-top: 60px;
+                margin-bottom:10px;
+            }
+
+        }
+        
+        a{
+            font-size: 1em;
+            color: rgb(127, 124, 124);
+            display: block;
+            text-decoration: none;
+            font-weight: 400;
+            text-align: center;
+        }
+    }
+}
+
+/* Estilos para Login para un max-width:992px (lg) */
+@media (min-width: 576px) and (max-width: 992px){
+    .main{
+        .seccionLogin{
+            width: 40vw;
+            .tituloLogin{
+                font-size: 1.8em;
+            }
+
+            form{
+                input{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px){
+    .main{
+        .seccionLogin{
+            width: 45vw;
+        
+            .tituloLogin{
+                font-size: 1.8em;
+            }           
+            form{
+            
+                input{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 0px) and (max-width: 576px){
+    .main{
+        .seccionLogin{
+            width: 70vw;
+        
+            .tituloLogin{
+                font-size: 1.8em;
+            }           
+            form{
+            
+                input{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
