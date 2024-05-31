@@ -200,36 +200,41 @@ body {
     }
 }
 
-.footer {
-    background-color: #9f3647;
-    color: #ffffff;
+.footer{
+    background-color:#401175;
+    color:#ffffff;
     height: 15vh;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    .listaNav {
+    .listaNav{
         list-style: none;
         display: flex;
         align-items: center;
-
-        .listaItem {
-            margin-left: 20px;
-
-            .linkNav {
+        .listaItem{
+            margin-left:20px;
+            .linkNav{
                 text-decoration: none;
-                color: #ffffff;
-                font-weight: 700;
-                font-size: 1.2rem;
+                color:#ffffff;
+                font-weight: 500;
+                font-size: 1rem;
             }
-
-            .administradorPeliculas {
+            .administradorPeliculas{
                 background-color: #181419;
                 color: white;
                 padding: 0.5rem 1rem;
                 border-radius: 5px;
             }
         }
+    }
+    .flechaArriba{
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        color: white;
+        cursor: pointer;
+        text-decoration: none;
+        display: none;
     }
 }
 
