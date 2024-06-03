@@ -3,12 +3,13 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Lora", serif;
-  font-optical-sizing: auto;
-  font-style: normal;
 }
 
 :root {
   --bg-color: #5b02a3;
+  --color: rgb(227, 213, 202);
+  --color-secundaario: #d5bdaf;
+  --color-terciario: #9d8189;
 }
 
 body {
@@ -18,12 +19,11 @@ body {
 
   font-optical-sizing: auto;
   font-style: normal;
-  background: linear-gradient(150deg, rgb(160, 127, 194), rgb(224, 212, 236));
-  background-repeat: no-repeat;
+  background-color: rgba(227, 213, 202, 0.627);
+  background: linear-gradient(150deg, #d5bdaf, #edede9);
 }
 
 .header {
-  color: #000000;
   position: sticky;
   height: 12vh;
   top: 0;
@@ -33,7 +33,7 @@ body {
     text-decoration: none;
     font-weight: 700;
     font-size: 1.5em;
-    color: #000000;
+    color: white ;
     height: inherit;
     margin-left: 40px;
     margin-right: 40px;
@@ -42,7 +42,7 @@ body {
     align-items: center;
 
     .spanLight {
-      color: var(--bg-color);
+      color: var(--color-terciario);
     }
   }
 }
@@ -63,11 +63,11 @@ main {
 }
 
 .seccionRegistrarse {
-  background-color: rgba(236, 230, 242, 0.751);
+  background-color: rgba(255,255,255,0.64);
   width: 40vw;
   margin: 0 auto;
   border: solid 2px #ffffff;
-  border-radius: 5px;
+  border-radius: 20px;
   padding: 40px 20px;
   height: 80vh;
   font-size: 1em;
@@ -106,7 +106,7 @@ input {
   margin-bottom: 15px; /* Espaciado inferior */
   padding-left: 20%;
   padding-right: 20%;
-  color: #4d1c7a; /* Color del texto */
+  color: var(--color-terciario); /* Color del texto */
   font-size: 0.9em;
   justify-content: center;
 }
@@ -120,7 +120,7 @@ input {
   padding: 10px;
   border: none;
   border-radius: 5px;
-  background-color: #4d1c7a;
+  background-color: var(--color-terciario);
   color: white;
   cursor: pointer;
 }
@@ -131,7 +131,7 @@ input {
   display: block;
   text-align: center;
   text-decoration: none;
-  color: #4d1c7a;
+  color: var(--color-terciario);
 }
 .seccionRegistrarse .ayuda:hover {
   text-decoration: underline;
@@ -151,7 +151,7 @@ form {
 .tituloRegistrarse {
   font-size: 2.2em;
   font-weight: 700;
-  color: var(--bg-color);
+  color: var(--color-terciario);
   text-align: center;
   margin-bottom: 40px;
 }

@@ -1,10 +1,14 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Lora", serif;
-    font-optical-sizing: auto;
-    font-style: normal;
+}
+
+:root{
+    --color: rgb(227, 213, 202);
+    --color-secundaario: #d5bdaf;
+    --color-terciario: #9d8189;
 }
 
 .carousel-item {
@@ -91,78 +95,212 @@ body {
 }
 
 /*ESTILOS HEADER PARA ESCRITORIO*/
-.header {
-    background-color: #ffffff;
-    color: #000000;
+.header{
+    background-color: var(--color-secundaario);
     height: 12vh;
-    position: sticky;
+    position:sticky;
     top: 0;
-    z-index: 10;
-
-    .navegacion {
+    z-index:10;
+    .navegacion{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-left: 40px;
+        margin-left:40px;
         margin-right: 40px;
         padding: 1.5rem 0;
-
-        .logo {
+        .logo{
             text-decoration: none;
             color: #000000;
             font-weight: 700;
             font-size: 1.5rem;
-
             /*animacion hover*/
-            &:hover {
-                animation: 0.25s infinite;
+            &:hover{
+                animation:  0.25s infinite;
             }
-        }
-
-        .listaNav {
+        }        
+        .listaNav{
             list-style: none;
             display: flex;
             align-items: center;
-
-            .listaItem {
-                margin-right: 20px;
-
-                .linkNav {
+            .listaItem{
+                margin-right:20px;
+                .linkNav{
                     text-decoration: none;
-                    color: #29124e;
+                    color:white;
                     font-weight: 500;
                     font-size: 1rem;
                     padding: 0.5rem 1rem;
                     /* Agregar efecto de botón presionado */
                     transition: transform 0.3s, box-shadow 0.3s;
-
                     &:hover {
                         transform: scale(0.95);
                         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
                         border-radius: 5px;
                     }
                 }
+            }
+           
+        }
+    }
+   
+}
+.seccion-ropas{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    
+    .tarjeta-ropa{
+        border: 2px solid var(--color);
+        box-shadow: 5px 2px 2px rgb(227, 213, 202,0.5);
+        border-radius: 10px;
+        width: 20vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;  /*Al parecer al ser un flex-direction column esta prop te alinea horizontalmente */
+        margin: 20px 20px;
+        justify-content: flex-end; /*Ahora hace la alineacion en forma vertical*/
+        text-align: center;
 
-                .linkNav.iniciarSesion {
+        &:hover{
+            transform: scale(1.1);
+        }
 
-                    color: rgb(0, 0, 0);
+        .titulo{
+            margin-top:20px;
+            font-weight: 600;
+        }
+        .ropa-img{
+            width: 50%;
+        }
 
-                    border-radius: 5px;
-                    transition: transform 0.3s, background-color 0.3s, color 0.3s, box-shadow 0.3s;
+        p{
+            font-size: 0.8em;
+        }
 
-                    &:hover {
-                        background-color: #401175;
-                        color: #ffffff;
-                        /* transform: scale(0.95);
-                         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);*/
-                    }
-                }
+        .contenedor-items{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            background-color: var(--color);
+            align-items: center;
+            color: white;
+            padding: 10px 0px ;
+                        
+            .item{
+                display: flex;
+                width: 80%;
+                justify-content: space-between; /*Alinea horizontalmente*/
+                align-items: center; /*Alinea verticalmente*/
+                flex-wrap: wrap;
             }
 
+            .btn-compra{
+                background-color: var(--color-secundaario);
+                color: white;
+                font-weight: 1000;
+                width: 75%;
+            }
+        
+        }
+    }
+    
+}
+
+.btn{
+    border: 0;
+    font-size: 0.8em;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.ropa{
+    width: 50vw;
+    height: 50vh;
+    background-color: var(--color-secundaario);   
+    position: fixed;
+    top: 25%;
+    left: 25%;
+    visibility: hidden;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    row-gap: 20px;
+
+    .compra-item{
+        display: flex;
+        width: 50%;
+        justify-content: space-around;
+
+        button{
+            background-color: transparent;
+            border: 0;
         }
     }
 
+    .mensaje{
+        color: red;
+        font-size: 0.5em;
+    }
+
+    .compra-btns{
+        display: flex;
+        flex-flow: row wrap;
+        gap: 10px;
+        width: 50%;
+        justify-content: space-around;
+
+        button{
+            background-color: rgba(255,255,255,0.6) ;
+
+            &:hover{
+                background-color: var(--color-terciario);
+            }
+        } 
+    }
 }
+
+
+@media (max-width:1024px){
+
+    .seccion-ropas{
+        .tarjeta-ropa{
+            width: 30vw;
+        }    
+    }
+}
+
+@media (max-width:768px){
+
+    .seccion-ropas{
+        .tarjeta-ropa{
+            width: 50vw;
+        }
+    }
+
+    .ropa{
+        .compra-item{
+            width: 100%;
+        }
+
+        .compra-btns{
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width:480px){
+
+    .seccion-ropas{
+        .tarjeta-ropa{
+            width: 90vw;
+        }
+    }
+}
+
 
 /*ESTILOS PARA HEADER MOBILE Y TABLET*/
 
@@ -201,9 +339,9 @@ body {
 }
 
 .footer{
-    background-color:#401175;
+    background-color:var(--color);
     color:#ffffff;
-    height: 15vh;
+    height: 12vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -218,12 +356,6 @@ body {
                 color:#ffffff;
                 font-weight: 500;
                 font-size: 1rem;
-            }
-            .administradorPeliculas{
-                background-color: #181419;
-                color: white;
-                padding: 0.5rem 1rem;
-                border-radius: 5px;
             }
         }
     }
@@ -254,10 +386,6 @@ body {
 
                 .linkNav {
                     font-size: 1rem;
-                }
-
-                .administradorPeliculas {
-                    padding: 0.5rem 0.8rem;
                 }
             }
         }

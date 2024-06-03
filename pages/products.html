@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/products.css">
 
@@ -13,14 +14,12 @@
 <body>
     <header class="header">
         <nav class="navegacion">
-            <a class="logo" href="../index.html">
-                <span>Moon<span style="color: #5b02a3">light</span></span>
-            </a>
+            <a class="logo" href="../index.html"><span>Moon</span><span style="color: #9d8189">light</span></a>
             <ul class="listaNav">
                 <li class="listaItem"><a class="linkNav" href="../pages/products.html">Productos</a></li>
                 <li class="listaItem"><a class="linkNav" href="../pages/registrarse.html">Registrarse</a></li>
-                <li class="listaItem"><a class="linkNav iniciarSesion" href="../pages/login.html">Iniciar Sesión</a>
-                </li>
+                <li class="listaItem"><a class="linkNav iniciarSesion" href="../pages/login.html">Iniciar Sesión</a></li>
+                <li class="listaItem"><i class="fa-solid fa-cart-shopping" style="color: white;"></i></li>
             </ul>
         </nav>
     </header>
@@ -129,394 +128,28 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
         </a>
     </div>
-    </br>
 
-    <div class="zapatillas" style="position: relative" id="zapatillas">
-        <div class="container-fluid text-center">
-            <div class="h2">Zapatillas</div>
-        </div></br>
-        <div class="container-fluid">
-            <div class="row justify-content-center text-center">
-                <div class="col-md-3 d-flex align-items-center">
-                    <div class="card text-bg-dark" style="width: 18rem;">
-                        <img src="https://mmgrim2.azureedge.net/MediaFiles/Grimoldi/2023/2/13/8093664.jpg"
-                            class="card-img-top img-fluid " alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Vans Old Skool Classic Negras</p>
-                            <p class="card-text">$119.999,99</p>
-                            <a class="btn btn-secondary" target="_blank"
-                                href="https://www.vans.com.ar/Product/Detail/VN0A4UUK6BT1/U_SK8-Low/Zapatillas-Negro-Vans/?conStock=true&historico=false&anterior=true&RegionSeleccionada=0&ProvinciaSeleccionada=2&ProveedorSeleccionada=449&FiltradoPorRegion=false">Comprar
-                                producto</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 d-flex align-items-center">
-                    <div class="card text-bg-dark" style="width: 18rem;">
-                        <img src="https://mmgrim2.azureedge.net/MediaFiles/Grimoldi/2023/2/7/8077305.jpg"
-                            class="card-img-top img-fluid" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Vans Zapatillas U OLD SKOOL</p>
-                            <p class="card-text">$119.999,99</p>
-                            <a class="btn btn-secondary" target="_blank"
-                                href="https://www.vans.com.ar/Product/Detail/VN000D3HNVY/U_OLD_SKOOL/Zapatillas-Azul-Vans/?conStock=true&historico=false&anterior=true&RegionSeleccionada=0&ProvinciaSeleccionada=2&ProveedorSeleccionada=449&FiltradoPorRegion=false">Comprar
-                                producto</a>
+    <section class="seccion-ropas" id="seccion-ropas">
 
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 d-flex align-items-center">
-                    <div class="card text-bg-dark" style="width: 18rem;">
-                        <img src="https://cdn.dcshoes.com.ar/media/catalog/product/cache/58de367b3bfe9e60ffd377a75f209f56/1/2/1242112071-10_2.jpg"
-                            class="card-img-top img-fluid" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Zapatilla Striker Ss (Bw) DC</p>
-                            <p class="card-text">$104.999,99</p>
-                            <a class="btn btn-secondary" target="_blank"
-                                href="https://www.dcshoes.com.ar/zapatilla-striker-ss-bw-dc">Comprar producto</a>
+    </section>     
+        
 
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 d-flex align-items-center">
-                    <div class=" card text-bg-dark" style="width: 18rem;">
-                        <img src="https://cdn.dcshoes.com.ar/media/catalog/product/cache/58de367b3bfe9e60ffd377a75f209f56/1/2/1241112015.jpg"
-                            class="card-img-top img-fluid" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Zapatilla Rowlan Tx (Bw6) DC</p>
-                            <p class="card-text">$134.999,99</p>
-                            <a class="btn btn-secondary" target="_blank"
-                                href="https://www.dcshoes.com.ar/zapatilla-striker-ss-bw-dc">
-                                Comprar producto
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="ropa" id="ropa">
+        <!--Va la info de una ropa si es que desea comprar-->
+        <h4>¿Desea comprar el producto?</h4>
+        <div class="compra-item">
+            <button id="btn-agregar"><i class="fa-solid fa-plus" style="color:red"></i></button>
+            <p id="campo-cantidad">1</p>
+            <button id="btn-reducir"><i class="fa-solid fa-minus" style="color:blue"></i></button>                
         </div>
-    </div>
-    </br>
-    <div class="remeras" style="position: relative" id="remeras">
-        <div class="container-fluid text-center">
-            <div class="h2">Remeras</div>
-        </div></br>
-        <div class="container-fluid">
-            <div class="row row-cols-1 row-cols-md-2">
-                <div class="col-md-3">
-                    <div class="card text-bg-dark" style="width: 18rem;">
-                        <img src="https://mmgrim2.azureedge.net/MediaFiles/Grimoldi/2024/2/16/9379482.jpg"
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Remera Left Chest Logo Tee II</p>
-                            <p class="card-text">$29.999,99</p>
-                            <a class="btn btn-secondary" target="_blank"
-                                href="https://www.vans.com.ar/Product/Detail/VN0A7TLGWHTCASA/Left_Chest_Logo_Tee_II/Remera-Blanco-Vans/?conStock=true&historico=false&anterior=true&RegionSeleccionada=0&ProvinciaSeleccionada=2&ProveedorSeleccionada=449&FiltradoPorRegion=false">Comprar
-                                producto</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="card text-bg-dark" style="width: 18rem;">
-                        <img src="https://mmgrim2.azureedge.net/MediaFiles/Grimoldi/2024/2/19/9385031.jpg"
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Remera Style 76 SS</p>
-                            <p class="card-text">$29.999,99</p>
-                            <a class="btn btn-secondary" target="_blank"
-                                href="https://www.vans.com.ar/Product/Detail/VN00004XYB2CASA/Style_76_SS/Remera-Blanco-Vans/?conStock=true&historico=false&anterior=true&RegionSeleccionada=0&ProvinciaSeleccionada=2&ProveedorSeleccionada=449&FiltradoPorRegion=false">Comprar
-                                producto</a>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card text-bg-dark" style="width: 18rem;">
-                        <img src="https://cdn.dcshoes.com.ar/media/catalog/product/cache/58de367b3bfe9e60ffd377a75f209f56/1/2/1242102032_01_1.jpg"
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Remera Mc Nine Four (Bla) DC</p>
-                            <p class="card-text">$29.999,99</p>
-                            <a class="btn btn-secondary" target="_blank"
-                                href="https://www.dcshoes.com.ar/remera-mc-nine-four-bla-dc">Comprar producto</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card text-bg-dark" style="width: 18rem;">
-                        <img src="https://cdn.dcshoes.com.ar/media/catalog/product/cache/58de367b3bfe9e60ffd377a75f209f56/1/2/1242102008-10_1.jpg"
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Remera Mc Heikkila Fs Noseblunt (Neg) DC</p>
-                            <p class="card-text">$29.999,99</p>
-                            <a class="btn btn-secondary" target="_blank"
-                                href="https://www.dcshoes.com.ar/remera-mc-heikkila-fs-noseblunt-neg-dc">Comprar
-                                producto</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <span  class="mensaje" id="mensaje-cantidad"></span>
+        <div class="compra-btns">
+            <button class="btn" id="btn-confirmar">Agregar al carrito</button>
+            <button class="btn" id="btn-cancelar">Cancelar</button>
         </div>
+        <span class="mensaje-exito" id="mensaje-exito"></span>
     </div>
-    <div class="sweaters" style="position: relative" id="sweaters">
-        <div class="container-fluid text-center">
-            <div class="h2">Sweaters</div>
-        </div></br>
-        <div class="container-fluid">
-            <div class="row row-cols-1 row-cols-md-2">
-                <div class="col-md-3">
-                    <div class="card text-bg-dark" style="width: 18rem;">
-                        <img src="https://cdn.dcshoes.com.ar/media/catalog/product/cache/58de367b3bfe9e60ffd377a75f209f56/1/2/1242111006_15_1.jpg"
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Sweater Htr DC</p>
-                            <p class="card-text">$50.999,99</p>
-                            <a class="btn btn-secondary" target="_blank"
-                                href="https://www.dcshoes.com.ar/sweater-htr-grp-dc">Comprar producto</a>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-md-3">
-                    <div class="card text-bg-dark" style="width: 18rem;">
-                        <img src="https://cdn.dcshoes.com.ar/media/catalog/product/cache/58de367b3bfe9e60ffd377a75f209f56/1/2/1242111001_10_1.jpg"
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Sweater DC Negro DC</p>
-                            <p class="card-text">$50.999,99</p>
-                            <a class="btn btn-secondary" target="_blank"
-                                href="https://www.dcshoes.com.ar/sweater-dc-colors-1-neg-dc">Comprar producto</a>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card text-bg-dark" style="width: 18rem;">
-                        <img src="https://smsweaters.com/tienda/6633-large_default/sweater-soledad-flower-doble-tejido.jpg"
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Sweater Soledad Flower</p>
-                            <p class="card-text">$18.999,99</p>
-                            <a class="btn btn-secondary" target="_blank"
-                                href="https://smsweaters.com/tienda/-sweaters/751-8256-sweater-soledad-flower-doble-tejido.html#/5-color-gris">Comprar
-                                producto</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card text-bg-dark" style="width: 18rem;">
-                        <img src="https://smsweaters.com/tienda/6497-large_default/sweater-murcielago-mariposa-doble-tejido.jpg"
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Sweater Murcielago Mariposa</p>
-                            <p class="card-text">$19.999,99</p>
-                            <a class="btn btn-secondary" target="_blank"
-                                href="https://smsweaters.com/tienda/-sweaters/737-8164-sweater-murcielago-mariposa-doble-tejido.html#/415-color-fucsia_beige_y_turqueza">Comprar
-                                producto</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </br>
-    <div class="gorros" style="position: relative" id="gorros">
-        <div class="container-fluid text-center">
-            <div class="h2">Gorros</div>
-        </div></br>
-        <div class="container-fluid">
-            <div class="row row-cols-1 row-cols-md-2">
-                <div class="col-md-3">
-                    <div class="card text-bg-dark" style="width: 18rem;">
-                        <img src="https://mmgrim2.azureedge.net/MediaFiles/Grimoldi/2024/2/21/9394287.jpg"
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Gorro Core Basics Beanie</p>
-                            <p class="card-text">$24.999,99</p>
-                            <a class="btn btn-secondary" target="_blank"
-                                href="https://www.vans.com.ar/Product/Detail/VN000K9YBLK/Core_Basics_Beanie/Gorros-Negro-Vans/?conStock=true&historico=false&anterior=true&RegionSeleccionada=0&ProvinciaSeleccionada=2&ProveedorSeleccionada=449&FiltradoPorRegion=false">Comprar
-                                producto</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="card text-bg-dark" style="width: 18rem;">
-                        <img src="https://mmgrim2.azureedge.net/MediaFiles/Grimoldi/2024/3/26/9495331.jpg"
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Gorro Skate Classics Beanie</p>
-                            <p class="card-text">$31.999,99</p>
-                            <a class="btn btn-secondary" target="_blank"
-                                href="https://www.vans.com.ar/Product/Detail/VN0A7TNBG3X/Skate_Classics_Beanie/Gorros-Fucsia-Vans/?conStock=true&historico=false&anterior=true&RegionSeleccionada=0&ProvinciaSeleccionada=2&ProveedorSeleccionada=449&FiltradoPorRegion=false">Comprar
-                                producto</a>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card text-bg-dark" style="width: 18rem;">
-                        <img src="https://mmgrim2.azureedge.net/MediaFiles/Grimoldi/2024/2/20/9389112.jpg"
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Gorro Core Basics Beanie</p>
-                            <p class="card-text">$24.999,99</p>
-                            <a class="btn btn-secondary" target="_blank"
-                                href="https://www.vans.com.ar/Product/Detail/VN000K9YCJL/Core_Basics_Beanie/Gorros-Verde-Vans/?conStock=true&historico=false&anterior=true&RegionSeleccionada=0&ProvinciaSeleccionada=2&ProveedorSeleccionada=449&FiltradoPorRegion=false">Comprar
-                                producto</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card text-bg-dark" style="width: 18rem;">
-                        <img src="https://mmgrim2.azureedge.net/MediaFiles/Grimoldi/2024/3/4/9434600.jpg"
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Gorro Core Basics Beanie</p>
-                            <p class="card-text">$24.999,99</p>
-                            <a class="btn btn-secondary" target="_blank"
-                                href="https://www.vans.com.ar/Product/Detail/VN000K9Y2N1/Core_Basics_Beanie/Gorros-Beige-Vans/?conStock=true&historico=false&anterior=true&RegionSeleccionada=0&ProvinciaSeleccionada=2&ProveedorSeleccionada=449&FiltradoPorRegion=false">Comprar
-                                producto</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </br>
-
-    <div class="camperas" style="position: relative" id="camperas">
-        <div class="container-fluid text-center">
-            <div class="h2">Camperas</div>
-        </div></br>
-        <div class="container-fluid">
-            <div class="row row-cols-1 row-cols-md-2">
-                <div class="col-md-3">
-                    <div class="card text-bg-dark" style="width: 18rem;">
-                        <img src="https://backend.converse.com.ar/media/image/66/e1/986b3dcc184160690d33e17a27a1.jpg"
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Campera Hoodie Nova</p>
-                            <p class="card-text">$100.000</p>
-                            <a class="btn btn-secondary" target="_blank"
-                                href="https://converse.com.ar/product/D3545501">
-                                Comprar producto
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="card text-bg-dark" style="width: 18rem;">
-                        <img src="https://backend.converse.com.ar/media/image/a7/53/4cee4d01c5ddcf882e22031c87cf.jpg"
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Campera All Star Sleeve Striped
-                            </p>
-                            <p class="card-text">$100.00</p>
-                            <a class="btn btn-secondary" target="_blank"
-                                href="https://converse.com.ar/product/D1545707">
-                                Comprar producto
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card text-bg-dark" style="width: 18rem;">
-                        <img src="https://backend.converse.com.ar/media/image/29/41/d84dfab6ab0b52569306f9f6fd66.jpg
-                        " class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Campera Logo Converse</p>
-                            <p class="card-text">$115.999,99</p>
-                            <a class="btn btn-secondary" target="_blank" href="https://converse.com.ar/product/D1571629">
-                                Comprar producto
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-3">
-                    <div class="card text-bg-dark" style="width: 18rem;">
-                        <img src="https://backend.converse.com.ar/media/image/0f/95/14ab7f79ccb52fe98e37eb274ff1.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Campera Metals Ribb</p>
-                            <p class="card-text">$90.000</p>
-                            <a class="btn btn-secondary" target="_blank" href="https://converse.com.ar/product/D5562294">
-                                Comprar producto
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </br>
-    <div class="medias" style="position: relative" id="medias">
-        <div class="container-fluid text-center">
-            <div class="h2">Medias</div>
-        </div></br>
-        <div class="container-fluid">
-            <div class="row row-cols-1 row-cols-md-2">
-                <div class="col-md-3">
-                    <div class="card text-bg-dark" style="width: 18rem;">
-                        <img src="https://mmgrim2.azureedge.net/MediaFiles/Grimoldi/2024/2/15/9373622.jpg"
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Medias Authentic Crew</p>
-                            <p class="card-text">$12.999,99</p>
-                            <a class="btn btn-secondary" target="_blank"
-                                href="https://www.vans.com.ar/Product/Detail/VN000GM3FS8/Authentic_Crew/Medias-SinColor-Vans/?conStock=true&historico=false&anterior=true&RegionSeleccionada=0&ProvinciaSeleccionada=2&ProveedorSeleccionada=449&FiltradoPorRegion=false">
-                                Comprar producto
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="card text-bg-dark" style="width: 18rem;">
-                        <img src="https://mmgrim2.azureedge.net/MediaFiles/Grimoldi/2024/2/20/9388648.jpg"
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Medias Curl Crew</p>
-                            <p class="card-text">$12.999,99</p>
-                            <a class="btn btn-secondary" target="_blank"
-                                href="https://www.vans.com.ar/Product/Detail/VN000CKEEHC/Curl_Crew/Medias-SinColor-Vans/?conStock=true&historico=false&anterior=true&RegionSeleccionada=0&ProvinciaSeleccionada=2&ProveedorSeleccionada=449&FiltradoPorRegion=false">
-                                Comprar producto
-                            </a>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card text-bg-dark" style="width: 18rem;">
-                        <img src="https://mmgrim2.azureedge.net/MediaFiles/Grimoldi/2024/2/15/9373593.jpg" 
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Medias Classic No Show</p>
-                            <p class="card-text">$24.999,99</p>
-                            <a class="btn btn-secondary" target="_blank"
-                                href="https://www.vans.com.ar/Product/Detail/VN000F105QJ/Classic_No_Show/Medias-SinColor-Vans/?conStock=true&historico=false&anterior=true&RegionSeleccionada=0&ProvinciaSeleccionada=2&ProveedorSeleccionada=449&FiltradoPorRegion=false">
-                                Comprar producto
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card text-bg-dark" style="width: 18rem;">
-                        <img src="https://mmgrim2.azureedge.net/MediaFiles/Grimoldi/2024/2/15/9373564.jpg"
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Medias Classic No Show</p>
-                            <p class="card-text">$22.999,99</p>
-                            <a class="btn btn-secondary" target="_blank"
-                                href="https://www.vans.com.ar/Product/Detail/VN000F10YB2/Classic_No_Show/Medias-SinColor-Vans">Comprar
-                                producto</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </br>
     <footer class="footer">
         <nav class="navegacion">
             <ul class="listaNav">
@@ -531,5 +164,10 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+<script src="https://kit.fontawesome.com/3dab01cf50.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>    
+<script>
+    AOS.init();
+</script>
+<script src="../js/products.js"></script>
 </html>
