@@ -1,0 +1,193 @@
+*{
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root{
+    --color: rgb(227, 213, 202);
+    --color-secundaario: white;
+    --color-terciario: #C2B280;
+}
+
+body{
+    /* font-family: "Lora", serif; */
+    font-family: "Montserrat", sans-serif !important; 
+}
+
+#btn-agregar{ /*Mismas propiedades de los btns del Modal*/
+    min-width: 45%;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: 400;
+    cursor: pointer;
+    color: white;
+    background-color: var(--color-terciario);
+    font-family: inherit;
+    letter-spacing: 0.2em;
+    margin: auto;
+    display: block;
+}
+
+
+table{
+    width: 50%;
+    margin: auto;
+    margin-top: 30px;
+    text-align: center;
+
+    thead{
+        font-weight: 700;
+    }
+
+    td{
+        padding: 10px 0; 
+    }
+
+    tbody{
+        text-transform: uppercase;
+        font-size: 0.8rem;
+    }
+
+    i{
+        color: white;
+    }
+
+    .btn{
+        display: inline-block;
+        width: 50%;
+        border-radius: 5px;
+        padding: 5px;
+        cursor: pointer;
+        background-color: var(--color-terciario);
+    }
+
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    background-color:rgba(0,0,0,0.7);
+    opacity: 0;
+    pointer-events: none; /*Desactiva cualquier evento del mouse*/
+    transition: opacity .6s; 
+}
+
+
+
+.modal-container{
+    margin: auto; /*Lo centra horizontal y verticalmente porque su padre tiene prop flex*/
+    width: 90%;
+    max-width: 600px;
+    background-color: rgba(255,255,255,0.8);
+    border-radius: 10px;
+    padding: 1em;
+    position: relative;
+    
+    .modal-close{
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: var(--color-terciario);
+        color: white;
+        border-radius: 5px;
+        padding: 6px;
+    }
+}
+
+
+.modal--show{
+    opacity:1;
+    pointer-events: unset;
+    transition: opacity .6s;
+}
+
+form{
+    display: flex;
+    flex-flow: column wrap;
+    width: 90%;
+    gap: 15px;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+
+    h2{
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        font-size: 15px;
+        font-weight: 700;
+        color: #C2B280;
+    }
+
+    input{
+        border: 1px solid gray;
+        padding: 10px;
+        border-radius: 5px;
+        width: 90%;
+        font-family: inherit;
+        font-weight: 200;
+    }
+
+    .botones{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        height: auto;
+        gap: 10px;
+        width: 90%;
+
+        button{
+            min-width: 45%;
+            border-radius: 5px;
+            padding: 10px;
+            font-weight: 400;
+            cursor: pointer;
+            color: white;
+            background-color: var(--color-terciario);
+            font-family: inherit;
+            letter-spacing: 0.2em;
+        }
+    }
+}
+
+.mensaje-error{
+    color: red;
+    font-weight: 500;
+    font-size: small;
+}
+
+.mensaje-exito{
+    color:green;
+    font-weight: 500;
+    font-size: small;
+    opacity: 0;
+    transition: opacity .6s;
+    pointer-events: none;
+}
+
+.mensaje-exito--show{
+    opacity:1;
+    transition: opacity .6s;
+}
+
+
+
+@media (max-width: 768px) {
+    table{
+        width: 90%;
+        overflow-x: scroll;
+    }
+}
+
+@media (max-width: 480px)
+{   
+    form button{
+        width: 100%;
+    }
+}

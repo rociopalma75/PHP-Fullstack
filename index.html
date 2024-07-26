@@ -5,20 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moonlight</title>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
-    <link rel="stylesheet" href="./css/style.css">
     <script src="https://kit.fontawesome.com/f7fb471b65.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/header_footer.css">
 </head>
 <body>
     <header class="header">
         <nav class="navegacion">
             <a class="logo" href="#"><span>Moon</span><span style="color: #9d8189">light</span></a>
             <ul class="listaNav">
-                <li class="listaItem"><a class="linkNav" href="pages/products.html">Productos</a></li>
+                <li class="listaItem"><a class="linkNav" href="pages/products.html">Productos API</a></li>
                 <li class="listaItem"><a class="linkNav" href="./pages/registrarse.html">Registrarse</a></li>
                 <li class="listaItem"><a class="linkNav" href="./pages/login.html">Iniciar Sesión</a></li>
-                <li class="listaItem"><i class="fa-solid fa-cart-shopping" style="color: white;"></i></li>
+                <li class="listaItem"><a class="linkNav" href="./pages/crud.html">CRUD</a></li>
+                <div class="nav-carrito">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="circulo-cantidad" id="carrito-cantidad">0</span>
+                </div>
             </ul>
         </nav>
     </header>
@@ -29,7 +33,7 @@
             <!-- <a class="botonRegistrarse" href="./pages/registrarse.html">Registrate</a> -->
         </section>
         <section data-aos="fade-up" data-aos-offset="300" data-aos-delay="50" data-aos-duration="1000" class="buscadorPrincipal">
-            <h2 class="tituloSection">Encontrá tu prenda favorita</h2>
+            <h2 class="tituloSection">Encontrá tu prenda</h2>
             <form class="buscadorPeliculas">
                 <input class="inputBuscador" type="text" placeholder="Buscar..."/>
                 <input class="botonBuscador" type="submit" value="Buscar">
@@ -176,37 +180,13 @@
            
             </ul>
         </nav>
-        <a href="#main" id="flecha" class="flechaArriba" onclick="scrollToTop()">
-            <img src="./assets/flecha-hacia-arriba.png" width="40vw" alt="ir arriba flecha">
-        </a>
     </footer>
     <script src="https://kit.fontawesome.com/3dab01cf50.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script href="js/scripts.js" >
-    AOS.init();
-
-    function scrollToTop() {
-    const c = document.documentElement.scrollTop || document.body.scrollTop;
-    if (c > 0) {
-        window.requestAnimationFrame(scrollToTop);
-        window.scrollTo(0, c - c / 8);
-    }
-}
-
-// Mostrar u ocultar el botón según la posición del usuario en la página
-function toggleScrollBtn() {
-    const scrollBtn = document.getElementById("flecha");
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        scrollBtn.style.display = 'block';
-    } else {
-        scrollBtn.style.display = 'none';
-    }
-}
-
-// Ejecutar toggleScrollBtn al hacer scroll
-window.onscroll = function() {
-    toggleScrollBtn();
-};
+    </script>
+    <script>
+            AOS.init();
     </script>
 </body>
 </html>

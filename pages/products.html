@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/products.css">
-
+    <link rel="stylesheet" href="../css/header_footer.css">
 </head>
 
 <body>
@@ -16,10 +16,14 @@
         <nav class="navegacion">
             <a class="logo" href="../index.html"><span>Moon</span><span style="color: #9d8189">light</span></a>
             <ul class="listaNav">
-                <li class="listaItem"><a class="linkNav" href="../pages/products.html">Productos</a></li>
+                <li class="listaItem"><a class="linkNav" href="#">Productos API</a></li>
                 <li class="listaItem"><a class="linkNav" href="../pages/registrarse.html">Registrarse</a></li>
-                <li class="listaItem"><a class="linkNav iniciarSesion" href="../pages/login.html">Iniciar Sesión</a></li>
-                <li class="listaItem"><i class="fa-solid fa-cart-shopping" style="color: white;"></i></li>
+                <li class="listaItem"><a class="linkNav" href="../pages/login.html">Iniciar Sesión</a></li>
+                <li class="listaItem"><a class="linkNav" href="../pages/crud.html">CRUD</a></li>
+                <div class="nav-carrito">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="circulo-cantidad" id="carrito-cantidad">0</span>
+                </div>
             </ul>
         </nav>
     </header>

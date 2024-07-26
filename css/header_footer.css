@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root{
+    --color: rgb(227, 213, 202);
+    --color-secundaario: white;
+    --color-terciario: #C2B280;
+}
+
+body{
+    min-height: 100vh;
+    padding-bottom: 13vh; /*Tener en cuenta el height del footer*/
+    position: relative;
+}
+
+.header, .footer{
+    font-family: "Montserrat", sans-serif !important; 
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 11px;
+}
+
+.header{
+    background-color: var(--color-secundaario);
+    height: 12vh;
+    position:sticky;
+    top: 0;
+    z-index:10;
+    .navegacion{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left:40px;
+        margin-right: 40px;
+        padding: 1.5rem 0;
+        
+        .logo{
+            color: #000000;
+            font-weight: 700;
+            font-family: "Lora", serif;
+            font-size: 1rem;
+
+            &:hover{
+                text-decoration: inherit;
+            }
+        }        
+
+        .listaNav{
+            list-style: none;
+            display: flex;
+            align-items: center;
+            .listaItem{
+                margin-right:20px;
+                .linkNav{
+                    
+                    color:black;
+                    padding: 0.5rem 1rem;
+                    /* Agregar efecto de botón presionado */
+                    transition: transform 0.3s, box-shadow 0.3s;
+                    &:hover {
+                        transform: scale(0.95);
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+                        border-radius: 5px;
+                        text-decoration: inherit;
+                    }
+                }
+            }
+           
+        }
+
+        .nav-carrito{
+            padding:0.5em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+            .circulo-cantidad{
+                width: 1.5em;
+                height: 1.5em;
+                font-size: 1em;
+                background-color: var(--color-terciario);
+                border-radius: 50%;
+                color: black;
+                text-align: center;
+            }
+
+            &:hover{
+                background-color: rgba(143, 123, 123, 0.3);
+                border-radius: 5px;
+            }
+        }
+    }
+   
+}
+
+.footer{
+    background-color:var(--color-secundaario);
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+
+    .listaNav{
+
+        list-style: none;
+        display: flex;
+        align-items: center;
+        .listaItem{
+            .linkNav{
+                margin-left: 20px;
+                text-decoration: none;
+                color:black;
+                font-weight: 500;
+                font-size: 0.8em;
+            }
+        }
+    }
+}
+
+
+
+/*ESTILOS PARA HEADER y FOOTER MOBILE Y TABLET*/
+
+@media (max-width: 768px) {
+
+    .header{
+        height: initial;
+        .navegacion{
+            margin-left:10px;
+            margin-right: 10px;
+            flex-direction: column;
+            row-gap: 20px;
+            .logo{
+                font-size: 1.2rem;
+                font-weight:700;
+            }
+            .listaNav{
+               
+                padding:initial;
+                .listaItem{
+                    .linkNav{
+                        font-weight: 400;
+                        margin-right: initial;
+                        padding: 0.2rem;
+                    }
+                  
+                }
+            }
+        }
+    }
+
+    .footer{
+        height: 15vh;
+        padding: 10px 0;
+        width: 100%;
+        height: 15vh;
+        .listaNav{
+            flex-direction: column;
+            row-gap: 5px;
+        }
+    }
+
+    body{
+        padding-bottom: 16vh;
+    }
+}
+

@@ -41,10 +41,11 @@ body{
 
         .logo{
             text-decoration: none;
-            font-weight: 700;
-            font-size: 1.5em;
             color: white;
-            
+            font-family: "Lora", serif;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
             .spanLight{
                 color: var(--color-terciario);
             }

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Productos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/header_footer.css">
+    <link rel="stylesheet" href="../css/crud.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navegacion">
+            <a class="logo" href="../index.html"><span>Moon</span><span style="color: #9d8189">light</span></a>
+            <ul class="listaNav">
+                <li class="listaItem"><a class="linkNav" href="../pages/products.html">Productos API</a></li>
+                <li class="listaItem"><a class="linkNav" href="../pages/registrarse.html">Registrarse</a></li>
+                <li class="listaItem"><a class="linkNav" href="../pages/login.html">Iniciar Sesión</a></li>
+                <li class="listaItem"><a class="linkNav" href="#">CRUD</a></li>
+                <div class="nav-carrito">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="circulo-cantidad" id="carrito-cantidad">0</span>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <button id="btn-agregar">Agregar Cliente</button>
+
+    <section class="modal">
+        <div class="modal-container">
+            <form id="postProducto-form">
+                <h2>Registrar Producto</h2>
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre del producto">
+                <span class="mensaje-error" id="error-nombre"></span>
+                <input type="number" name="precio" id="precio" placeholder="Precio del producto">
+                <div class="botones">
+                    <button type="submit" class="btn-registrar">REGISTRAR</button>
+                    <button type="reset" class="btn-cancelar">CANCELAR</button>
+                </div>
+                <span class="mensaje-exito" id="estado-peticion">Se registro correctamente el producto</span>
+            </form>
+            <a href="#" class="modal-close"><i class="fa-solid fa-square-xmark"></i></a>
+        </div>
+    </section>
+
+    <table>
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>Nombre</td>
+                <td>Precio</td>
+                <td colspan="2">Opciones</td>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
+
+    <footer class="footer">
+        <nav class="navegacion">
+            <ul class="listaNav">
+                <li class="listaItem"><a class="linkNav" href="">Términos y condiciones</a></li>
+                <li class="listaItem"><a class="linkNav" href="">Preguntas frecuentes</a></li>
+                <li class="listaItem"><a class="linkNav" href="">Ayuda</a></li>
+                <li class="listaItem"><a class="linkNav administradorPeliculas" href="">Redes Sociales</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/3dab01cf50.js" crossorigin="anonymous"></script>
+    <script src="../js/app.js"></script>
+</body>
+</html>

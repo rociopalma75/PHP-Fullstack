@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Lora", serif;
 }
 
 :root{
@@ -92,58 +91,9 @@ body {
     color: rgb(0, 0, 0);
     text-align: center;
     align-items: center;
+    font-family: "Lora", serif;
 }
 
-/*ESTILOS HEADER PARA ESCRITORIO*/
-.header{
-    background-color: var(--color-secundaario);
-    height: 12vh;
-    position:sticky;
-    top: 0;
-    z-index:10;
-    .navegacion{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-left:40px;
-        margin-right: 40px;
-        padding: 1.5rem 0;
-        .logo{
-            text-decoration: none;
-            color: #000000;
-            font-weight: 700;
-            font-size: 1.5rem;
-            /*animacion hover*/
-            &:hover{
-                animation:  0.25s infinite;
-            }
-        }        
-        .listaNav{
-            list-style: none;
-            display: flex;
-            align-items: center;
-            .listaItem{
-                margin-right:20px;
-                .linkNav{
-                    text-decoration: none;
-                    color:white;
-                    font-weight: 500;
-                    font-size: 1rem;
-                    padding: 0.5rem 1rem;
-                    /* Agregar efecto de botón presionado */
-                    transition: transform 0.3s, box-shadow 0.3s;
-                    &:hover {
-                        transform: scale(0.95);
-                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-                        border-radius: 5px;
-                    }
-                }
-            }
-           
-        }
-    }
-   
-}
 .seccion-ropas{
     display: flex;
     flex-flow: row wrap;
@@ -297,97 +247,6 @@ body {
     .seccion-ropas{
         .tarjeta-ropa{
             width: 90vw;
-        }
-    }
-}
-
-
-/*ESTILOS PARA HEADER MOBILE Y TABLET*/
-
-@media (max-width: 768px) {
-    .header {
-        height: initial;
-
-        .navegacion {
-            margin-left: 10px;
-            margin-right: 10px;
-            flex-direction: column;
-            row-gap: 20px;
-
-            .logo {
-                font-size: 1.2rem;
-                font-weight: 700;
-            }
-
-            .listaNav {
-
-                padding: initial;
-
-                .listaItem {
-                    .linkNav {
-                        font-weight: 400;
-                        margin-right: initial;
-                        font-size: 1rem;
-                        padding: 0.2rem;
-
-                    }
-
-                }
-            }
-        }
-    }
-}
-
-.footer{
-    background-color:var(--color);
-    color:#ffffff;
-    height: 12vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .listaNav{
-        list-style: none;
-        display: flex;
-        align-items: center;
-        .listaItem{
-            margin-left:20px;
-            .linkNav{
-                text-decoration: none;
-                color:#ffffff;
-                font-weight: 500;
-                font-size: 1rem;
-            }
-        }
-    }
-    .flechaArriba{
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        color: white;
-        cursor: pointer;
-        text-decoration: none;
-        display: none;
-    }
-}
-
-/*ESTILOS FOOTER CELULAR Y TABLET CHICA*/
-@media (max-width: 768px) {
-    .footer {
-        height: initial;
-        padding-top: 15px;
-        padding-bottom: 20px;
-
-        .listaNav {
-            flex-direction: column;
-
-            row-gap: 15px;
-
-            .listaItem {
-
-                .linkNav {
-                    font-size: 1rem;
-                }
-            }
         }
     }
 }
