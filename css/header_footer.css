@@ -33,12 +33,11 @@ body{
     top: 0;
     z-index:10;
     .navegacion{
+        height: inherit;
         display: flex;
         justify-content: space-between;
+        margin: 0px 40px;
         align-items: center;
-        margin-left:40px;
-        margin-right: 40px;
-        padding: 1.5rem 0;
         
         .logo{
             color: #000000;
@@ -49,7 +48,20 @@ body{
             &:hover{
                 text-decoration: inherit;
             }
-        }        
+        }
+
+        input{
+            display: none;
+        }
+
+        .nav-container-check{
+            padding:0.5em;
+            display: none;
+            img{
+                height: 1rem;
+                cursor: pointer;
+            }
+        }
 
         .listaNav{
             list-style: none;
@@ -58,13 +70,10 @@ body{
             .listaItem{
                 margin-right:20px;
                 .linkNav{
-                    
                     color:black;
                     padding: 0.5rem 1rem;
-                    /* Agregar efecto de botón presionado */
-                    transition: transform 0.3s, box-shadow 0.3s;
+
                     &:hover {
-                        transform: scale(0.95);
                         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
                         border-radius: 5px;
                         text-decoration: inherit;
@@ -127,7 +136,20 @@ body{
     }
 }
 
-
+@keyframes nav-slidein {
+    0%{
+        height: 0;
+        opacity: 0;
+    }
+    50%{
+        height: 50px;
+        opacity: 0.2;
+    }
+    100%{
+        height: 120px;
+        opacity: 1;
+    }
+}
 
 /*ESTILOS PARA HEADER y FOOTER MOBILE Y TABLET*/
 
@@ -136,17 +158,34 @@ body{
     .header{
         height: initial;
         .navegacion{
-            margin-left:10px;
-            margin-right: 10px;
+            padding: 2em 0;
+            margin: 0 10px;
             flex-direction: column;
-            row-gap: 20px;
+            row-gap: 2em;
+
             .logo{
                 font-size: 1.2rem;
                 font-weight:700;
             }
+
+            .nav-container-check{
+                position: absolute;
+                top: 2em;
+                right: 1em;
+                display: block;
+            }
+
+            input:checked + .listaNav{
+                display: flex;
+                animation: nav-slidein 2s ease-in-out;
+                animation-fill-mode: forwards;
+            }
+
             .listaNav{
-               
-                padding:initial;
+                flex-direction: column;
+                row-gap: 2em;
+                display: none;
+
                 .listaItem{
                     .linkNav{
                         font-weight: 400;
@@ -156,7 +195,16 @@ body{
                   
                 }
             }
+        
+            .nav-carrito{
+                position: absolute;
+                top: 2em;
+                right: 3.5em;
+            }
+
+
         }
+
     }
 
     .footer{
