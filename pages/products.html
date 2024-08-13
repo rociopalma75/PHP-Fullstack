@@ -8,23 +8,27 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/products.css">
-    <link rel="stylesheet" href="../css/header_footer.css">
+    <link rel="stylesheet" href="../css/header_footer.css">    
 </head>
 
 <body>
     <header class="header">
         <nav class="navegacion">
             <a class="logo" href="../index.html"><span>Moon</span><span style="color: #9d8189">light</span></a>
+            <div class="nav-container-check">
+                <label for="nav-check"><img src="../assets/menu-nav.png" alt=""></label>
+            </div>
+            <input type="checkbox" name="nav-check" id="nav-check">
             <ul class="listaNav">
                 <li class="listaItem"><a class="linkNav" href="#">Productos API</a></li>
                 <li class="listaItem"><a class="linkNav" href="../pages/registrarse.html">Registrarse</a></li>
                 <li class="listaItem"><a class="linkNav" href="../pages/login.html">Iniciar Sesión</a></li>
                 <li class="listaItem"><a class="linkNav" href="../pages/crud.html">CRUD</a></li>
-                <div class="nav-carrito">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <span class="circulo-cantidad" id="carrito-cantidad">0</span>
-                </div>
             </ul>
+            <div class="nav-carrito">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="circulo-cantidad" id="carrito-cantidad">0</span>
+            </div>
         </nav>
     </header>
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
